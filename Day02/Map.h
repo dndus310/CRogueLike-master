@@ -1,9 +1,17 @@
 #pragma once
+
 class Map
 {
 public:
 	Map();
 	~Map();
+
+	class Player* player;
+
+	void Init(class Player* _player);
+
+	void Tick(int KeyCode);
+	void Draw();
 
 	int Data[10][10] = {
 	{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
